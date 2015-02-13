@@ -1,8 +1,8 @@
-= Base project for Fig and Docker projects
+# Base project for Fig and Docker projects
 
 Using this project it should be easy to get started with Fig and Docker.
 
-= Usage
+# Usage
 
 `vagrant up`
 `vagrant ssh`
