@@ -10,6 +10,8 @@ Using this project it should be easy to get started with Fig and Docker.
 
 # Usage
 
+How to test that Fig works in Vagrant environment.
+
 ```
 vagrant up
 vagrant ssh
@@ -18,4 +20,11 @@ cd /vagrant
 fig run --rm test echo 'Welcome to busybox'
 ```
 
-Feel free to build the fig environment you want to work with!
+How to add your own fig project to this base. From your host, outside of Vagrant.
+
+```
+git submodule add https://github.com/your_user/your_repository your_project_directory
+git submodule update --init --recursive
+```
+
+Build the fig environment you want!
