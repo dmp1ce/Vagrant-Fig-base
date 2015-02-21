@@ -1,4 +1,4 @@
-# Base project for Fig and Docker projects
+ Base project for Fig and Docker projects
 
 Using this project it should be easy to get started with Fig and Docker.
 
@@ -20,7 +20,7 @@ cd /vagrant
 fig run --rm test echo 'Welcome to busybox'
 ```
 
-How to add your own fig project to this base. From your host, outside of Vagrant.
+How to add your own Fig project to this base. From your host, outside of Vagrant.
 
 
 ```
@@ -36,4 +36,4 @@ git submodule add https://github.com/your_user/your_repository your_project_dire
 git submodule update --init --recursive
 ```
 
-Build the fig environment you want!
+Build the Fig environment you want!
