@@ -22,6 +22,15 @@ fig run --rm test echo 'Welcome to busybox'
 
 How to add your own fig project to this base. From your host, outside of Vagrant.
 
+
+```
+git clone https://github.com/your_user/your_repository your_project_directory
+cd your_project_directory
+git submodule update --init --recursive
+```
+
+OR to add the project and track it as a Git submodule.
+
 ```
 git submodule add https://github.com/your_user/your_repository your_project_directory
 git submodule update --init --recursive
