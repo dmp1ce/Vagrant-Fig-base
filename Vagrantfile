@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if ENV['VAGRANT_NFS'] == 'OFF'
     puts "NFS is OFF. To turn NFS on `export VAGRANT_NFS=ON`"
     # Configure port forwards for viewing website from other computers
-    config.vm.network "forwarded_port", guest: 80, host: 8080
+    config.vm.network "forwarded_port", guest: 80, host: 20800
     config.vm.network "forwarded_port", guest: 443, host: 44380
   else
     puts "NFS is ON. To turn NFS off `export VAGRANT_NFS=OFF`"
