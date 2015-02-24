@@ -20,11 +20,11 @@ pacman -Syu --needed --noconfirm
 pacman-db-upgrade
 
 # Install Docker
-echo "Installing docker."
+echo "Installing Docker."
 pacman -S --needed --noconfirm docker
 
 # Start Docker
-echo "Enabling docker"
+echo "Enabling Docker"
 systemctl enable docker
 systemctl restart docker
 
