@@ -55,12 +55,7 @@ else
     echo "Using previously installed apacman"
 fi
 
-echo "Installing Fig"
-# Install Fig and it's dependencies
-/opt/apacman/apacman -S --needed --noconfirm python2-docker-py
-# Remove a conflicting library (issue with Fig install)
-/opt/apacman/apacman -Rdd --noconfirm python2-websocket-client
-# Finally, install Fig
-/opt/apacman/apacman -S --needed --noconfirm fig
+echo "Installing Docker Compose"
+/opt/apacman/apacman -S --needed --noconfirm docker-compose
 
 echo "Done provisioning"
