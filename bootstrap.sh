@@ -58,4 +58,7 @@ fi
 echo "Installing Docker Compose"
 /opt/apacman/apacman -S --needed --noconfirm docker-compose
 
+echo "Installing decompose"
+/opt/apacman/apacman -S --needed --noconfirm decompose-git
+
 echo "Done provisioning"
