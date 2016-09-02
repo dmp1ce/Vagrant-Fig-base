@@ -6,6 +6,10 @@ echo "Starting provisioning script."
 # and docker.sock will get correct permissions.
 umask 022
 
+# Change umask for future.
+sed -i '/umask 027/c\#umask 027' /home/vagrant/.profile
+sed -i '/#umask 022/c\umask 022' /home/vagrant/.profile
+
 # Get an updated list of mirrors and then rank them.
 if [ ! -f /etc/pacman.d/mirrorlist.new ]; then
     wget -O /etc/pacman.d/mirrorlist.new 'https://www.archlinux.org/mirrorlist/?country=US&protocol=http&ip_version=4'
