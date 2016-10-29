@@ -40,8 +40,10 @@ pacman -S --needed --noconfirm nfs-utils
 echo "Enabling NFS client"
 systemctl enable rpcbind
 systemctl enable nfs-client.target
+systemctl enable remote-fs.target
 systemctl restart rpcbind
 systemctl restart nfs-client.target
+systemctl restart remote-fs.target
 
 # Install Fig
 # Requirements for AUR helper
