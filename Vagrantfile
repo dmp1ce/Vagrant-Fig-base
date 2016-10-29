@@ -32,6 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puts "NFS is ON. To turn NFS off `export VAGRANT_NFS=OFF`"
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
+    # Set and IP address that works for your network!
     config.vm.network :private_network, ip: "10.2.4.103"
     # Use NFS for shared folders for better performance
     config.vm.synced_folder '.', '/vagrant', nfs: true
