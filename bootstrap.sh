@@ -20,8 +20,8 @@ pacman -Syu --needed --noconfirm
 pacman-db-upgrade
 
 # Install Docker
-echo "Installing Docker."
-pacman -S --needed --noconfirm docker
+echo "Installing Docker and Docker Compose."
+pacman -S --needed --noconfirm docker docker-compose
 
 # Start Docker
 echo "Enabling Docker"
@@ -54,9 +54,6 @@ if [ ! -f /opt/apacman/apacman ]; then
 else
     echo "Using previously installed apacman"
 fi
-
-echo "Installing Docker Compose"
-/opt/apacman/apacman -S --needed --noconfirm docker-compose
 
 echo "Installing decompose"
 /opt/apacman/apacman -S --needed --noconfirm decompose-git
