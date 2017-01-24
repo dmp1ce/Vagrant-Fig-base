@@ -17,6 +17,10 @@ if [ ! -f /etc/pacman.d/mirrorlist.new ]; then
     rankmirrors -n 6 /etc/pacman.d/mirrorlist.new > /etc/pacman.d/mirrorlist
 fi
 
+# Update pacman keys
+echo "Updating pacman GPG keys"
+pacman-key -r 8D8172C8
+
 # Update packages
 echo "Updating packages"
 pacman -Syu --needed --noconfirm
